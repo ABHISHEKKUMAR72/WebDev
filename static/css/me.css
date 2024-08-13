@@ -24,4 +24,65 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
+
+}
+body {
+    background-color: #f6f5f9;
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.jumbotron {
+    background-color: #007bff;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.image {
+    width: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    color: #007bff;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+.nav-link {
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    margin: 0.5rem;
+    color: #007bff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2);
 }
