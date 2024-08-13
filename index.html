@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgb(246, 245, 249);
+            color: rgb(0, 0, 0);
+            font-family: "Roboto", sans-serif;
+        }
+
+        .jumbotron {
+            background-color: #007bff;
+            color: white;
+            padding: 2rem 1rem;
+        }
+
+        .image {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        h2 {
+            color: #007bff;
+            font-size: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">My CV</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="jumbotron text-center">
+        <img src="/static/images/abhishek.webp" alt="Abhishek's Profile Picture"
+            class="image img-fluid mx-auto d-block">
+        <h1 class="display-4">Abhishek</h1>
+        <p class="lead">(Data Analyst)</p>
+    </div>
+
+    <!-- About Me -->
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h2 id="about" class="card-title">About Me</h2>
+                <p class="card-text">My name is Abhishek Kumar. I am a student at Niet GR Noida, pursuing a B.Tech in
+                    Computer Science and Engineering. I am a web developer, continually learning and working on new
+                    technologies.</p>
+            </div>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="card">
+            <div class="card-body">
+                <h2 id="hobbies" class="card-title">My Hobbies</h2>
+                <p class="card-text">I enjoy playing cricket and football, reading books, and watching movies. I am a
+                    big fan of the Marvel Cinematic Universe and have watched all the movies in the series.</p>
+            </div>
+        </div>
+
+        <!-- Favorite Books -->
+        <div class="card">
+            <div class="card-body">
+                <h2 id="books" class="card-title">My Favorite Books</h2>
+                <p class="card-text">My favorite books include "The Lord of the Rings," "Harry Potter," and "The
+                    Alchemist." I have read these books multiple times and never tire of them.</p>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="card">
+            <div class="card-body">
+                <h2 id="skills" class="card-title">Skills</h2>
+                <ul class="list-unstyled">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Excel</li>
+                    <li>Power BI</li>
+                    <li>SQL</li>
+                    <li>Machine Learning</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="card">
+            <div class="card-body">
+                <h2 id="experience" class="card-title">Experience</h2>
+                <p class="card-text">I have worked as a web developer intern at a startup and on various freelance
+                    projects. I am experienced in building websites from scratch and comfortable with both frontend and
+                    backend technologies.</p>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="card">
+            <div class="card-body">
+                <h2 id="education" class="card-title">Education</h2>
+                <p class="card-text">I am pursuing my B.Tech in Computer Science and Engineering at Niet GR Noida. I
+                    have completed multiple online courses on web development and am always eager to learn new things.
+                </p>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="card">
+            <div class="card-body">
+                <h2 id="projects" class="card-title">My Projects</h2>
+                <p class="card-text">I have built a personal portfolio website using HTML, CSS, and JavaScript.
+                    Additionally, I created a weather app using React and a chat application using Node.js. Currently, I
+                    am working on a blog website using React and Node.js.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <footer id="contact" class="text-center">
+        <a href="mailto:abhikgupta345@gmail.com"><i class="bi bi-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/abhishek-kumar-9a1a041a8/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/ABHISHEKKUMAR72"><i class="bi bi-github"></i></a>
+    </footer>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

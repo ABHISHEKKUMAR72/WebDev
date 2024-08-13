@@ -1,0 +1,27 @@
+html,
+body {
+    /* text-align: center; */
+    background-color: rgb(246, 245, 249);
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+}
+
+h2 {
+    color: rgb(246, 246, 245);
+    font-size: xx-large;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.image{
+    display: block;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
