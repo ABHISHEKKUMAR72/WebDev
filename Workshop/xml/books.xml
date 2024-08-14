@@ -1,0 +1,16 @@
+<library>
+    <book>
+        <category>Fiction</category>
+        <title>Harry Potter</title>
+        <author>J.K. Rowling</author>
+        <year>2000</year>
+        <price>29.99</price>
+    </book>
+    <book>
+        <category>Non-Fiction</category>
+        <title>Java Programming</title>
+        <author>John Doe</author>
+        <year>2010</year>
+        <price>49.99</price>
+    </book>
+</library>
