@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #e72222;
+            border-radius: 10px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .about-me,
+        .education,
+        .experience,
+        .skills,
+        .certifications {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Ques:1- Create and Style a Biodata
+    Task:
+    Create a resume using HTML and CSS that includes the following 
+    sections:
+    Header:
+    Name
+    Job Title
+    Number
+    Email
+    About Me Section:
+    A brief paragraph about the individual's professional background and 
+    skills.
+    Education Section:
+    A table with columns for Degree, Institution, and Year of Graduation.
+    Experience Section:
+    A list of job experiences with each job title, company name, and job 
+    description in separate paragraphs.
+    Skills Section:
+    A list of skills, with each skill presented in a paragraph.
+    Certifications Section:
+    A table listing certifications with columns for certification name and 
+    year.
+    Requirements:
+    HTML:
+    Structure the resume using appropriate HTML elements, including 
+    headings, paragraphs, lists, and tables.
+    Use <table> elements for organizing education and certification details.
+    CSS:
+    Style the resume to make it professional and easy to read.
+    Include styling for the header, section titles, tables, and paragraphs.
+    Ensure that the resume is centered on the page with a maximum width 
+    of 800px.
+    Add padding and borders where necessary for clarity and aesthetics.
+    Your Task:
+    Write the HTML and CSS code to create and style this resume. -->
+
+    <div class="resume">
+        <div class="header">
+            <h1>Biodata</h1>
+            <h1>Abhishek Kumar</h1>
+            <h2> Data Analyst</h2>
+            <p>Number:4547984654</p>
+            <p>Email:
+                <a href="mailto:0221csds002@niet.co.in">
+                    0221csds002@niet.co.in
+                </a>
+            </p>
+        </div>
+
+        <div class="about-me">
+            <h3>About Me</h3>
+            <p>I am an analyst with a solid foundation in statistical analysis, data mining, and predictive modeling.
+                Skilled in leveraging tools like SQL, Python, and Excel to interpret and visualize complex datasets,
+                enabling data-driven decision-making</p>
+        </div>
+        <hr>
+        <div class="education">
+            <h3>Education</h3>
+            <table>
+                <tr>
+                    <th>Degree</th>
+                    <th>Institution</th>
+                    <th>Year of Graduation</th>
+                </tr>
+                <tr>
+                    <td>B.tech in Computer Science (Data Science)</td>
+                    <td>NIET GR Noida</td>
+                    <td>2026</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="experience">
+
+            <h3>Experience</h3>
+
+            <p>Job Title: Data Analyst</p>
+            <p>Company Name: Google</p>
+            <p>Job Description:As a </p>
+        </div>
+        <hr>
+        <div class="skills">
+            <h3>Skills</h3>
+            <p>Machine Learning</p>
+            <p>Power BI</p>
+            <p>SQL</p>
+            <p>MongoDB</p>
+            <p>Hadoop</p>
+        </div>
+        <hr>
+        <div class="certifications">
+            <h3>Certifications</h3>
+            <table>
+                <tr>
+                    <th>Coursera</th>
+                    <th>2023</th>
+                </tr>
+                <tr>
+                    <td>Python For Data Science</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>Big Data Analysis</td>
+                    <td>2024</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

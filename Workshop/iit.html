@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Delhi</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f1f1;
+            font-family: 'Kalam', cursive;
+        }
+
+        .header-img {
+            border-radius: 50%;
+            background: black;
+            padding: 10px;
+            width: 150px;
+            height: 150px;
+        }
+
+        h1 {
+            color: #db5151;
+        }
+
+        h2,
+        h3,
+        .para {
+            color: #000000;
+        }
+
+        .youtube-icon {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+
+        .content-section {
+            padding: 30px 0;
+        }
+
+        .table {
+            margin-top: 20px;
+        }
+
+        .table th,
+        .table td {
+            vertical-align: middle;
+        }
+
+        /* Carousel Image Styling */
+        .carousel-inner img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: none;
+            z-index: 99;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="70">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">IIT Delhi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="#life">Fresher Life</a></li>
+                <li class="nav-item"><a class="nav-link" href="#buildings">Buildings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-up">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7DnX9_gux74i_xZXe7Ds8Zd3qCxFOttca_Q&s"
+                    class="d-block w-100" alt="Campus View">
+            </div>
+            <div class="carousel-item">
+                <img src="https://img1.wsimg.com/isteam/ip/63b04b47-d65a-4207-a58c-3e58f38419ef/iit5.jpg" class="d-block w-100" alt="Library">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUm3uwzQQIeDlfcBEBlWyFK-b1WglYdpiCA&s" class="d-block w-100" alt="Hostel">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Overview Section -->
+    <div id="overview" class="container text-center content-section" data-aos="fade-up">
+        <h1>Indian Institute of Technology Delhi</h1>
+        <a href="https://home.iitd.ac.in/" target="_blank">
+            <img src="/static/images/iitd1.jpg" alt="IIT Delhi Logo" class="header-img mx-auto d-block">
+        </a>
+    </div>
+
+    <!-- Fresher Life Section -->
+    <div id="life" class="container text-center content-section" data-aos="fade-right">
+        <h3>IIT Delhi Fresher Life</h3>
+        <div class="embed-responsive embed-responsive-16by9 mx-auto" style="max-width: 600px;">
+            <iframe class="embed-responsive-item"
+                src="https://www.youtube.com/embed/q_2CadwNYBc?si=COt6tYxFs40wP1Ah" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- YouTube Channel Section -->
+    <div class="container content-section" data-aos="fade-left">
+        <h2>IIT Delhi YouTube Channel:</h2>
+        <a href="https://youtube.com/@iitdelhi?si=UZ_U3Tq7U-5E1hJQ" target="_blank">
+            <img class="youtube-icon"
+                src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
+                alt="YouTube Icon">
+        </a>
+    </div>
+
+    <!-- Buildings Section -->
+    <div id="buildings" class="container content-section" data-aos="fade-up">
+        <h2>College Building Details</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Building</th>
+                        <th>Floors</th>
+                        <th>Rooms</th>
+                        <th>Facilities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Main Building</td>
+                        <td>5</td>
+                        <td>50</td>
+                        <td>Lecture, Offices</td>
+                    </tr>
+                    <tr>
+                        <td>Library</td>
+                        <td>3</td>
+                        <td>30</td>
+                        <td>Books, Study Area</td>
+                    </tr>
+                    <tr>
+                        <td>Hostel</td>
+                        <td>10</td>
+                        <td>100</td>
+                        <td>Rooms, Mess</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="btn btn-dark btn-lg" role="button" title="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Modal Trigger -->
+    <div class="container content-section text-center" data-aos="zoom-in">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Learn More About IIT Delhi
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">About IIT Delhi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="modalAccordion">
+                        <!-- History Section -->
+                        <div class="card">
+                            <div class="card-header" id="headingHistory">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseHistory" aria-expanded="true"
+                                        aria-controls="collapseHistory">
+                                        History
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseHistory" class="collapse show" aria-labelledby="headingHistory"
+                                data-parent="#modalAccordion">
+                                <div class="card-body">
+                                    IIT Delhi was established in 1961 as one of the Institutes of National Importance.
+                                    Since then, it has grown to become a leader in education, research, and innovation.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Achievements Section -->
+                        <div class="card">
+                            <div class="card-header" id="headingAchievements">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseAchievements" aria-expanded="false"
+                                        aria-controls="collapseAchievements">
+                                        Achievements
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseAchievements" class="collapse" aria-labelledby="headingAchievements"
+                                data-parent="#modalAccordion">
+                                <div class="card-body">
+                                    IIT Delhi has produced numerous leaders in various fields, including technology,
+                                    business, and research. It consistently ranks among the top engineering institutions
+                                    globally.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Future Plans Section -->
+                        <div class="card">
+                            <div class="card-header" id="headingFuture">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseFuture" aria-expanded="false"
+                                        aria-controls="collapseFuture">
+                                        Future Plans
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFuture" class="collapse" aria-labelledby="headingFuture"
+                                data-parent="#modalAccordion">
+                                <div class="card-body">
+                                    IIT Delhi aims to expand its research capabilities, foster innovation, and maintain
+                                    its status as a top-tier global educational institution.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS Animation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- jQuery and Bootstrap JS with Bundle (includes Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Custom Script for Back to Top Button -->
+    <script>
+        $(document).ready(function () {
+            var btn = $('#back-to-top');
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+            btn.on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+        });
+    </script>
+</body>
+
+</html>

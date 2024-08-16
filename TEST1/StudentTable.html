@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+    <style>
+        /* CSS styling for the container */
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* CSS styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .total-row {
+            font-weight: bold;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <table>
+            <caption>STUDENT TABLE</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>xyz</td>
+                    <td>AIML</td>
+                    <td>DELHI</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>abc</td>
+                    <td>IoT</td>
+                    <td>Greater Noida</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>def</td>
+                    <td>CSE</td>
+                    <td>Bihar</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>ghi</td>
+                    <td>MCA</td>
+                    <td>Gaya</td>
+                </tr>
+                <tr>
+                    <td>105</td>
+                    <td>hij</td>
+                    <td>EEE</td>
+                    <td>Kochi</td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="4">Total student count: 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

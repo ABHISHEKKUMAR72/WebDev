@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tech Workshop Registration</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #080808;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #3ba9c7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+
+table td {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Web Tech Workshop</h1>
+        <table>
+            <tr>
+                <th>Registration Form</th>
+            </tr>
+            <tr>
+                <td>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Date of Joining:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Shift:</label>
+                            <input type="checkbox" id="morning" name="shift" value="morning">
+                            <label for="morning">Morning</label>
+                            <input type="checkbox" id="evening" name="shift" value="evening">
+                            <label for="evening">Evening</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email ID:</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email ID" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+    <style>
+        /* CSS styling for the container */
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* CSS styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .total-row {
+            font-weight: bold;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <table>
+            <caption>STUDENT TABLE</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>xyz</td>
+                    <td>AIML</td>
+                    <td>DELHI</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>abc</td>
+                    <td>IoT</td>
+                    <td>Greater Noida</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>def</td>
+                    <td>CSE</td>
+                    <td>Bihar</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>ghi</td>
+                    <td>MCA</td>
+                    <td>Gaya</td>
+                </tr>
+                <tr>
+                    <td>105</td>
+                    <td>hij</td>
+                    <td>EEE</td>
+                    <td>Kochi</td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="4">Total student count: 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>                      <div class="form-group">
+                            <label for="fee-status">Fee Status:</label>
+                            <select id="fee-status" name="fee-status" required>
+                                <option value="" disabled selected>Select your fee status</option>
+                                <option value="paid">Paid</option>
+                                <option value="unpaid">Unpaid</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
