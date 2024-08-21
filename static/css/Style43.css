@@ -1,0 +1,22 @@
+/* Basic styles for the navigation menu */
+nav ul {
+    list-style-type: none;
+    padding:0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(8, 0, 255);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Pseudo-Class for hover effect */
+nav ul li a:hover {
+    color:rgb(73, 215, 54);
+}
