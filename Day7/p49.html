@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Scripts  Operators</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Javascript Operators</title>
 </head>
 <body>
-    <h1>JavaScripts Operators</h1>
-    <script>
-        // arithmetic operators
-        let x = 10;
-        let y = 5;
-        document.write("Arithmetc Opertaors: <br>");
-        document.write(`x + y = ${x + y} <br>`);
-        document.write(`x - y = ${x - y} <br>`);
-        document.write(`x * y = ${x * y} <br>`);
-        document.write(`x / y = ${x / y} <br>`);
-        document.write(`x % y = ${x % y} <br>`);
-        ;
-        // assignment operators
-        document.write("Assignment Operators: <br>");
-        let p=5;
-        let q=10;
-        document.write(`p=${p} <br>`);
-        p+=q;
-        document.write(`p+=q: ${p} <br>`);
-        p-=q;
-        document.write(`p-=q: ${p} <br>`);
-        p*=q;
-        document.write(`p*=q: ${p} <br>`);
-        p/=q;
-        document.write(`p/=q: ${p} <br>`);
-        p%=q;
-        document.write(`p%=q: ${p} <br><br>`);
+   <h1>Javascript Operators</h1>
+   <script>
+       let num1 = 10;
+       let num2 = 5;
+       document.write("Arithmetic Operators: <br>");
+       document.write(`num1 + num2 =  ${num1 + num2}<br>`);
+       document.write(`num1 - num2 =  ${num1 - num2}<br>`);
+       document.write(`num1 * num2 =  ${num1 * num2}<br>`);
+       document.write(`num1 / num2 =  ${num1 / num2}<br>`);
+       document.write(`num1 % num2 =  ${num1 % num2}<br>`);
+      
 
 
-    </script>
-    
+
+
+       // Assignment Operators
+       let x = 5;
+       let y = 3;
+       document.write("Assignment Operators: <br>");
+       document.write(`x = ${x}<br>`);
+       x+=y;
+       document.write(`x+=y = ${x}<br>`);
+       x-=y;
+       document.write(`x-=y = ${x}<br>`);
+       x*=y;
+       document.write(`x*=y = ${x}<br>`);
+       x/=y;
+       document.write(`x/=y = ${x}<br>`);
+       x%=y;
+       document.write(`x%=y = ${x}<br><br>`);
+       
+       // Comparison Operators
+       let a = 10;
+       let b = 5;
+
+
+       document.write("Comparison Operators: <br>");
+       document.write(`a == b = ${a == b}<br>`);
+       document.write(`a != b = ${a != b}<br>`);
+       document.write(`a > b = ${a > b}<br>`);
+       document.write(`a < b = ${a < b}<br>`);
+       document.write(`a >= b = ${a >= b}<br>`);
+       document.write(`a <= b = ${a <= b}<br><br>`);
+
+
+       // Logical Operators
+       let isTrue = true;
+       let isFalse = false;
+       document.write("Logical Operators: <br>");
+       document.write(`isTrue && isFalse = ${isTrue && isFalse}<br>`);
+       document.write(`isTrue || isFalse = ${isTrue || isFalse}<br><br>`);
+
+
+   </script>
 </body>
 </html>
