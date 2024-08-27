@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON SELECT and ON LOAD Events</title>
+</head>
+
+<body>
+    <h1>on select and on load event example</h1>
+
+    <p>Select a color:</p>
+
+    <select id="colorselect">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <p id="selectedcolor"></p>
+
+    <script>
+        function onselectChange() {
+            var select = document.getElementById("colorselect");
+            var selectedcolor = select.options[select.selectedIndex].value;
+  
+            document.getElementById("selectedcolor").innerHTML = "You selected: " + selectedcolor;
+        }
+        function onLoad() {
+            document.getElementById("selectedcolor").innerHTML = "Please select a color";
+        }
+
+        // Attach the event listener to the select element
+        var select = document.getElementById("colorselect");
+        select.addEventListener("change", onselectChange);
+        window.addEventListener("load", onLoad);
+    </script>
+</body>
+
+</html>
