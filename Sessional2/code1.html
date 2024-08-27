@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(163, 42, 42, 0.1);
+        }
+
+        input[type="number"] {
+            width: 60%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff1900;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #niet {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fd0d0d;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Factorial Calculator</h1>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="calculateFactorial()">Calculate Factorial</button>
+        <p id="niet"></p>
+    </div>
+    <script>
+        function calculateFactorial() {
+            const number = parseInt(document.getElementById("numberInput").value);
+            let result = 1;
+
+            if (number < 0) {
+                document.getElementById("niet").innerHTML = "Factorial of a negative number is undefined.";
+                return;
+            }
+
+            for (let i = 1; i <= number; i++) {
+                result *= i;
+            }
+
+            document.getElementById("niet").innerHTML = "Factorial of " + number + " is: " + result;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        textarea {
+            width: 80%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        #errorMessage {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Multiplication Table Generator</h1>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="generateTable()">Generate Table</button>
+        <textarea id="tableOutput" readonly></textarea>
+        <p id="errorMessage"></p>
+    </div>
+    <script>
+        function generateTable() {
+            const number = parseInt(document.getElementById("numberInput").value);
+            const tableOutput = document.getElementById("tableOutput");
+            const errorMessage = document.getElementById("errorMessage");
+
+            // Clear previous outputs
+            tableOutput.value = '';
+            errorMessage.innerHTML = '';
+
+            // Validate input
+            if (isNaN(number) || number <= 0) {
+                errorMessage.innerHTML = "Please enter a valid positive number.";
+                return;
+            }
+
+            // Generate multiplication table
+            let table = '';
+            for (let i = 1; i <= 10; i++) {
+                table += `${number} x ${i} = ${number * i}\n`;
+            }
+
+            // Display the generated table in the textarea
+            tableOutput.value = table;
+        }
+
+    </script>
+</body>
+
+</html>

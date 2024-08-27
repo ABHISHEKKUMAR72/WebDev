@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="reset"] {
+            background-color: #d9534f;
+        }
+
+        #message {
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">User Name:</label>
+            <input type="text" id="username" placeholder="Enter your username">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <br>
+            <button type="button" onclick="validateLogin()">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script>
+        // Array of valid usernames and passwords
+        const validUsers = [
+            { username: "user1", password: "pass1" },
+            { username: "user2", password: "pass2" },
+            { username: "admin", password: "admin123" }
+        ];
+
+        function validateLogin() {
+            // Get the input values
+            const usernameInput = document.getElementById('username').value;
+            const passwordInput = document.getElementById('password').value;
+
+            // Find if the user exists in the validUsers array
+            const user = validUsers.find(user => user.username === usernameInput && user.password === passwordInput);
+
+            // Display message based on validation
+            const messageElement = document.getElementById('message');
+            if (user) {
+                messageElement.style.color = "green";
+                messageElement.innerHTML = "Login successful!";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.innerHTML = "Invalid username or password.";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
