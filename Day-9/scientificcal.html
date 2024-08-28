@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Scientific Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator {
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #333;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculator h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #f1c40f;
+        }
+
+        #result {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #444;
+            border-radius: 8px;
+            font-size: 24px;
+            text-align: right;
+            background-color: #222;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .button {
+            width: 20%;
+            padding: 15px;
+            margin: 5px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: #fff;
+        }
+
+        .button.operator {
+            background-color: #e74c3c;
+        }
+
+        .button.number {
+            background-color: #555;
+        }
+
+        .button.clear {
+            background-color: #f39c12;
+        }
+
+        .button.equal {
+            background-color: #2ecc71;
+        }
+
+        .button.scientific {
+            background-color: #3498db;
+        }
+
+        .button.memory {
+            background-color: #e67e22;
+        }
+
+        .button:hover {
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>CASIO</h1>
+        <input type="text" id="result" readonly>
+        <br>
+        <!-- Memory and Clear Buttons -->
+        <button class="button memory" onclick="memoryStore()">M+</button>
+        <button class="button memory" onclick="memoryRecall()">MR</button>
+        <button class="button memory" onclick="memoryClear()">MC</button>
+        <button class="button clear" onclick="clearResult()">C</button>
+        <br>
+        <!-- Trigonometry -->
+        <button class="button scientific" onclick="scientificOperation('sin')">sin</button>
+        <button class="button scientific" onclick="scientificOperation('cos')">cos</button>
+        <button class="button scientific" onclick="scientificOperation('tan')">tan</button>
+        <button class="button scientific" onclick="scientificOperation('asin')">asin</button>
+        <br>
+        <!-- Hyperbolic and Exponential -->
+        <button class="button scientific" onclick="scientificOperation('sinh')">sinh</button>
+        <button class="button scientific" onclick="scientificOperation('cosh')">cosh</button>
+        <button class="button scientific" onclick="scientificOperation('tanh')">tanh</button>
+        <button class="button scientific" onclick="scientificOperation('exp')">exp</button>
+        <br>
+        <!-- Standard Functions -->
+        <button class="button scientific" onclick="scientificOperation('sqrt')">√</button>
+        <button class="button scientific" onclick="scientificOperation('log')">log</button>
+        <button class="button scientific" onclick="scientificOperation('ln')">ln</button>
+        <button class="button scientific" onclick="scientificOperation('factorial')">x!</button>
+        <br>
+        <!-- Additional Functions -->
+        <button class="button scientific" onclick="scientificOperation('ceil')">ceil</button>
+        <button class="button scientific" onclick="scientificOperation('floor')">floor</button>
+        <button class="button scientific" onclick="scientificOperation('abs')">abs</button>
+        <button class="button scientific" onclick="scientificOperation('round')">round</button>
+        <br>
+        <!-- Numerical and Operators -->
+        <button class="button number" onclick="appendToResult('7')">7</button>
+        <button class="button number" onclick="appendToResult('8')">8</button>
+        <button class="button number" onclick="appendToResult('9')">9</button>
+        <button class="button operator" onclick="appendToResult('/')">/</button>
+        <br>
+        <button class="button number" onclick="appendToResult('4')">4</button>
+        <button class="button number" onclick="appendToResult('5')">5</button>
+        <button class="button number" onclick="appendToResult('6')">6</button>
+        <button class="button operator" onclick="appendToResult('*')">*</button>
+        <br>
+        <button class="button number" onclick="appendToResult('1')">1</button>
+        <button class="button number" onclick="appendToResult('2')">2</button>
+        <button class="button number" onclick="appendToResult('3')">3</button>
+        <button class="button operator" onclick="appendToResult('-')">-</button>
+        <br>
+        <button class="button number" onclick="appendToResult('0')">0</button>
+        <button class="button operator" onclick="appendToResult('.')">.</button>
+        <button class="button equal" onclick="calculateResult()">=</button>
+        <button class="button operator" onclick="appendToResult('+')">+</button>
+    </div>
+
+    <script>
+        let memory = 0;
+
+        function appendToResult(value) {
+            document.getElementById("result").value += value;
+        }
+
+        function clearResult() {
+            document.getElementById("result").value = "";
+        }
+
+        function calculateResult() {
+            var result = document.getElementById("result").value;
+            try {
+                document.getElementById("result").value = eval(result);
+            } catch (error) {
+                document.getElementById("result").value = "Error";
+            }
+        }
+
+        function scientificOperation(operation) {
+            var result = document.getElementById("result").value;
+            if (result === "") {
+                document.getElementById("result").value = "Error";
+                return;
+            }
+            try {
+                var num = eval(result);
+                switch (operation) {
+                    case 'sqrt':
+                        document.getElementById("result").value = Math.sqrt(num);
+                        break;
+                    case 'sin':
+                        document.getElementById("result").value = Math.sin(num);
+                        break;
+                    case 'cos':
+                        document.getElementById("result").value = Math.cos(num);
+                        break;
+                    case 'tan':
+                        document.getElementById("result").value = Math.tan(num);
+                        break;
+                    case 'sinh':
+                        document.getElementById("result").value = Math.sinh(num);
+                        break;
+                    case 'cosh':
+                        document.getElementById("result").value = Math.cosh(num);
+                        break;
+                    case 'tanh':
+                        document.getElementById("result").value = Math.tanh(num);
+                        break;
+                    case 'log':
+                        document.getElementById("result").value = Math.log10(num);
+                        break;
+                    case 'ln':
+                        document.getElementById("result").value = Math.log(num);
+                        break;
+                    case 'exp':
+                        document.getElementById("result").value = Math.exp(num);
+                        break;
+                    case 'factorial':
+                        document.getElementById("result").value = factorial(num);
+                        break;
+                    case 'ceil':
+                        document.getElementById("result").value = Math.ceil(num);
+                        break;
+                    case 'floor':
+                        document.getElementById("result").value = Math.floor(num);
+                        break;
+                    case 'abs':
+                        document.getElementById("result").value = Math.abs(num);
+                        break;
+                    case 'round':
+                        document.getElementById("result").value = Math.round(num);
+                        break;
+                    default:
+                        document.getElementById("result").value = "Error";
+                        break;
+                }
+            } catch (error) {
+                document.getElementById("result").value = "Error";
+            }
+        }
+
+        function factorial(n) {
+            if (n < 0 || n !== Math.floor(n)) return "Error";
+            if (n === 0 || n === 1) return 1;
+            else return n * factorial(n - 1);
+        }
+
+        function memoryStore() {
+            memory = parseFloat(document.getElementById("result").value);
+        }
+
+        function memoryRecall() {
+            document.getElementById("result").value = memory;
+        }
+
+        function memoryClear() {
+            memory = 0;
+        }
+    </script>
+</body>
+
+</html>

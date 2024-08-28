@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onClick and onSubmit Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>onClick and onSubmit Events Example</h1>
+
+        <!-- Example with onClick Event -->
+        <h2>Click the button to change the text:</h2>
+        <p id="clickExample">Click Me!</p>
+        <button onclick="changeText()">Click Me</button>
+
+        <!-- Example with onSubmit Event -->
+        <h2>Submit a Form:</h2>
+        <form id="myForm" onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        // Function for onClick event
+        function changeText() {
+            var clickExample = document.getElementById("clickExample");
+            clickExample.innerHTML = "Button clicked!";
+        }
+
+        // Function for onSubmit event
+        function submitForm(event) {
+            event.preventDefault(); // Prevents the form from submitting automatically
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            alert("Form submitted with Name: " + name + " and Email: " + email);
+        }
+    </script>
+</body>
+</html>
