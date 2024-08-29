@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods in Es6</title>
+</head>
+<body>
+    <h1>String Methods in Es6</h1>
+
+    <script>
+        const originalString="Hello World!";
+
+        documnet.write(`<p>Original String: ${originalString}</p>`);
+
+        const stringLength=originalString.length;
+        document.write(`<p>Length of the String: ${stringLength}</p>`);
+
+        const upperCaseString=originalString.toUpperCase();
+        document.write(`<p>Uppercase String: ${upperCaseString}</p>`);
+
+        const lowerCaseString=originalString.toLowerCase();
+        document.write(`<p>Lowercase String: ${lowerCaseString}</p>`);
+
+        const containSubString=originalString.includes("World");
+        document.write(`<p>Does the string contain "Hello": ${containSubString}</p>`);
+
+        const indexSubString=originalString.indexOf("World");
+        document.write(`<p>Index of "World": ${indexSubString}</p>`);
+
+        const substring = originalString.substring(7,12);
+        document.write(`<p>Substring: ${substring}</p>`);
+
+        const replaceString=originalString.replace("World","Universe");
+        document.write(`<p>Replaced String: ${replaceString}</p>`);
+
+        const splitString=originalString.split(",");
+        document.write(`<p>Split String: ${splitString}</p>`);
+
+        const trimString="   Hello World!   ";  
+        const trimmedString=stringwithwhitespace.trim();
+        document.write(`<p>Trimmed String: ${trimString.trim()}</p>`);
+
+    </script>
+</body>
+</html>
